@@ -32,8 +32,8 @@ const cardComponentContainer = (card) =>{
         //flip from front to bakside
         if(card.isFront){
             
-            frontSide.classList.add("hidden");
-            backSide.classList.remove("hidden");
+           setTimeout(()=>{frontSide.classList.add("hidden")},100);
+           setTimeout(()=>{backSide.classList.remove("hidden")},100);
             cardContainer.classList.remove("frontStyle");
             cardContainer.classList.add("backStyle");
             switchButton.innerText = "Byt till framsidan";
@@ -43,8 +43,8 @@ const cardComponentContainer = (card) =>{
         //flip from bakside to front
         else{
             
-            frontSide.classList.remove("hidden");
-            backSide.classList.add("hidden");
+            setTimeout(()=>{frontSide.classList.remove("hidden")},100);
+            setTimeout(()=>{backSide.classList.add("hidden")},100);
             cardContainer.classList.add("frontStyle");
             cardContainer.classList.remove("backStyle");
             switchButton.innerText = "Byt till baksidan";
